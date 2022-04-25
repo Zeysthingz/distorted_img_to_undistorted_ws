@@ -6,6 +6,10 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif ()
 
 find_package(ament_cmake_auto REQUIRED)
+#set(OpenCV_DIR "~/libraries/libopencv-4.5.5/lib/cmake/opencv4/")
+#find_package(OpenCV 4.5 REQUIRED)
+
+
 #set(OpenCV_DIR "/home/zeys/libraries/libopencv-4.5.5/share/opencv4/")
 # find dependencies
 find_package(OpenCV  REQUIRED)
@@ -35,4 +39,5 @@ rclcpp_components_register_node(image_rectifier_node
 ament_auto_package(
         INSTALL_TO_SHARE
         launch
+        params
 )
