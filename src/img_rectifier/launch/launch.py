@@ -18,6 +18,8 @@ def generate_launch_description():
             # namespace='deneme',
             # parametreyi direkt yaml filedan okur.
             parameters=[image_rectifier_node_prefix_param_file],
+            # to see c++ codes
+            output='screen'
 
 
         )

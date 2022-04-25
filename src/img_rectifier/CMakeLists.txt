@@ -7,7 +7,7 @@ endif ()
 
 find_package(ament_cmake_auto REQUIRED)
 #set(OpenCV_DIR "~/libraries/libopencv-4.5.5/lib/cmake/opencv4/")
-#find_package(OpenCV 4.5 REQUIRED)
+#find_package(OpenCV 4.5.5 REQUIRED)
 
 
 #set(OpenCV_DIR "/home/zeys/libraries/libopencv-4.5.5/share/opencv4/")

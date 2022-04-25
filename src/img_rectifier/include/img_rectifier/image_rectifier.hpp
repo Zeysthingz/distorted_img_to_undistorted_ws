@@ -15,6 +15,8 @@
 #include <opencv2/opencv.hpp>
 #include <stdio.h>
 #include "opencv2/highgui/highgui.hpp"
+#include <vector>
+#include <iostream>
 
 
 using namespace std::chrono_literals;
@@ -31,11 +33,10 @@ class ImageRectifierNode : public rclcpp::Node {
   cv::Mat camera_matrix_;
   cv::Mat distCoeffs;
   cv::Mat undistorted_image;
-//
-//  These headers will allow us to load an image using OpenCV and convert it to the ROS message format.
+//vektorun içinde double türünde veriler var
+  std::vector<double> camera_matrix;
+  std::vector<double> distortion_coefs;
 
-//   std::shared_ptr<image_transport::ImageTransport> deneme_;
-//   image_transport::Publisher undistorted_img_publisher_;
 
 
 
