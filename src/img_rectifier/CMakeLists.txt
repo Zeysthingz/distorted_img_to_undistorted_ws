@@ -33,7 +33,7 @@ target_link_libraries(image_rectifier_node
 # works as main  plugın takes string be carefull about write string correctly
 rclcpp_components_register_node(image_rectifier_node
         PLUGIN "ImageCorrector::ImageRectifierNode"
-        EXECUTABLE image_rectifier
+        EXECUTABLE image_rectifier_node_exe
         )
 
 ament_auto_package(
