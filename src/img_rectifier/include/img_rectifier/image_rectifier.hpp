@@ -25,7 +25,6 @@ class ImageRectifierNode : public rclcpp::Node {
   // Publishers
   cv::Mat m_camera_matrix;
   cv::Mat m_distCoeffs;
-  cv::Mat m_undistorted_image;
 
 //vektorun içinde double türünde veriler var
   std::vector<double> m_camera_matrix_param;
@@ -33,6 +32,8 @@ class ImageRectifierNode : public rclcpp::Node {
 
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr undistorted_img_publisher_;
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr distorted_img_subscription_;
+
+  std::function<void(std::shared_ptr<sensor_msgs::msg::Image>)> functionSub;
 
   void CameraRectifierCallback(const sensor_msgs::msg::Image::SharedPtr &msg_image);
 };
